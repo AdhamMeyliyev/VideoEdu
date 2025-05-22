@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test — VideoEdu</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body style="background-color: #0f1117; color: #fff; font-family: 'Poppins', sans-serif;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-neon" href="../index.html">📹 VideoEdu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Bosh sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="editors.html">Dasturlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tutorial.html">Qo‘llanmalar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Test</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link " href="./about.html">Haqida</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link" href="./contact.html">Aloqa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Test Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">🧠 Bilimingizni sinang!</h2>
+
+      <div id="quiz-box" class="bg-dark border border-secondary rounded p-4 shadow-lg" style="max-width: 600px; margin: 0 auto;">
+        <div id="question-box">
+          <h4 id="question">Savol yuklanmoqda...</h4>
+          <div id="options" class="mt-3"></div>
+        </div>
+        <button class="btn btn-neon mt-4" onclick="submitAnswer()">Yuborish</button>
+        <p id="result" class="mt-3 fw-bold"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Quiz JS -->
+  <script>
+  const quiz = [
+    {
+      question: "Qaysi dastur video montaj uchun mo‘ljallangan?",
+      options: ["Photoshop", "Premiere Pro", "Illustrator", "Audacity"],
+      correct: 1
+    },
+    {
+      question: "DaVinci Resolve dasturida qaysi bo‘lim rang korreksiyasi uchun ishlatiladi?",
+      options: ["Edit", "Color", "Media", "Fairlight"],
+      correct: 1
+    },
+    {
+      question: "Shotcut qanday dastur?",
+      options: ["To‘lovli", "Mobil ilova", "Bepul video tahrir dasturi", "Online o‘yin"],
+      correct: 2
+    },
+    {
+      question: "Adobe After Effects nima uchun ishlatiladi?",
+      options: ["Video effektlar va animatsiyalar uchun", "Audio yozish uchun", "Rasmlar tahriri uchun", "Matn terish uchun"],
+      correct: 0
+    },
+    {
+      question: "Kdenlive qaysi operatsion tizimda ishlaydi?",
+      options: ["Linux", "Windows", "MacOS", "Hammasida"],
+      correct: 3
+    },
+    {
+      question: "Audacity dasturi qaysi turdagi fayllar bilan ishlaydi?",
+      options: ["Video", "Audio", "Matn", "Rasm"],
+      correct: 1
+    },
+    {
+      question: "OBS Studio asosan nima uchun ishlatiladi?",
+      options: ["Montaj", "Jonli efir va yozuv", "Video ko‘rish", "Kod yozish"],
+      correct: 1
+    },
+    {
+      question: "Premiere Pro’ning asosiy formati qanday?",
+      options: [".prproj", ".mp4", ".psd", ".mov"],
+      correct: 0
+    },
+    {
+      question: "Render nima?",
+      options: ["Faylni o‘chirish", "Video faylga aylantirish", "Yorug‘lik sozlash", "Zoom qilish"],
+      correct: 1
+    },
+    {
+      question: "Timeline nima?",
+      options: ["Rasmlar", "Audio fayllar", "Tahrirlash paneli", "Vaqt jadvali"],
+      correct: 3
+    },
+    {
+      question: "Transition nima qiladi?",
+      options: ["Video kesadi", "O‘tkazmalar qo‘shadi", "Audio tahrirlaydi", "Subtitrlar yaratadi"],
+      correct: 1
+    },
+    {
+      question: "CapCut dasturi asosan qayerda ishlatiladi?",
+      options: ["Web", "Mobil qurilmalar", "Kameralarda", "Linux terminalida"],
+      correct: 1
+    },
+    {
+      question: "Keyframe nima uchun ishlatiladi?",
+      options: ["Effektni qo‘shish", "Animatsiya boshqaruvi", "Zoom", "Render"],
+      correct: 1
+    },
+    {
+      question: "Green Screen texnologiyasi nimani anglatadi?",
+      options: ["Ko‘k fon", "Yashil fon bilan almashtirish", "Qizil fon", "Oddiy rasm"],
+      correct: 1
+    },
+    {
+      question: "Qaysi format video fayl hisoblanadi?",
+      options: [".mp3", ".jpg", ".mp4", ".docx"],
+      correct: 2
+    },
+    {
+      question: "Subtitrlash qanday vazifani bajaradi?",
+      options: ["Video tezligini oshiradi", "Video ostiga matn yozadi", "Rasm qo‘shadi", "Audio o‘zgartiradi"],
+      correct: 1
+    },
+    {
+      question: "LUT nima?",
+      options: ["Video uzunligi", "Audio filtri", "Rang sozlamalari", "Yozuv formati"],
+      correct: 2
+    },
+    {
+      question: "Frame Rate nimani bildiradi?",
+      options: ["Rasm o‘lchami", "Sahifa soni", "1 sekunddagi kadrlar soni", "Yozuv davomiyligi"],
+      correct: 2
+    },
+    {
+      question: "TikTok uchun odatda qaysi format ishlatiladi?",
+      options: ["16:9", "21:9", "1:1", "9:16"],
+      correct: 3
+    },
+    {
+      question: "Adobe Rush qanday dastur?",
+      options: ["Pro darajadagi animatsiya", "Oddiy video montaj ilovasi", "Rasmlar tahrirlovchi", "Kod muharriri"],
+      correct: 1
+    }
+  ];
+
+  let current = 0;
+  let score = 0;
+
+  function loadQuestion() {
+    const q = quiz[current];
+    document.getElementById("question").textContent = q.question;
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((opt, i) => {
+      const btn = document.createElement("button");
+      btn.textContent = opt;
+      btn.className = "btn btn-outline-light d-block w-100 my-2";
+      btn.onclick = () => selectAnswer(i);
+      optionsDiv.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(selected) {
+    const q = quiz[current];
+    if (selected === q.correct) score++;
+    current++;
+
+    if (current < quiz.length) {
+      loadQuestion();
+    } else {
+      let feedback = "";
+
+      if (score >= 15) {
+        feedback = "🌟 Ajoyib ish! Siz video tahrirlash sohasini yaxshi bilasiz!";
+      } else if (score >= 10) {
+        feedback = "👍 Yaxshi! Biroz ko‘proq mashq qilsangiz, zo‘r bo‘ladi!";
+      } else {
+        feedback = "📘 Hali o‘rganishlaringiz oldinda. Harakatdan to‘xtamang!";
+      }
+
+      document.getElementById("quiz-box").innerHTML = `
+        <h4 class="text-center">✅ Test yakunlandi!</h4>
+        <p class="text-center mt-3">Siz ${quiz.length} ta savoldan <strong>${score}</strong> tasiga to‘g‘ri javob berdingiz.</p>
+        <p class="text-center mt-2">${feedback}</p>
+        <a href="test.html" class="btn btn-neon d-block mx-auto mt-3" style="width: 150px;">Qaytadan</a>
+      `;
+    }
+  }
+
+  function submitAnswer() {
+    alert("Iltimos, variantlardan birini tanlang.");
+  }
+
+  loadQuestion();
+</script>
+
+</body>
+</html>

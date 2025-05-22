@@ -1,0 +1,39 @@
+/* Neon ranglar */
+.text-neon {
+  color: #00f5a0;
+}
+.btn-neon {
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  border: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px #00f5a080;
+}
+.btn-neon:hover {
+  background: #00f5a0;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Navbar active nav-link border */
+.nav-link.active {
+  border-bottom: 2px solid #00f5a0;
+}
+
+
+.text-neon {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.btn-neon {
+  background: linear-gradient(45deg, #00b074, #00ffa3);
+  color: white;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-neon:hover {
+  background: linear-gradient(45deg, #00ffa3, #00b074);
+  transform: scale(1.05);
+}

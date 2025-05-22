@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dasturlar — VideoEdu</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body style="background-color: #0f1117; color: #fff; font-family: 'Poppins', sans-serif;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-neon" href="../index.html">📹 VideoEdu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Bosh sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Dasturlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tutorial.html">Qo‘llanmalar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">Test</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link " href="./about.html">Haqida</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link" href="pages/contact.html">Aloqa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dasturlar bo‘limi -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">📦 Zamonaviy Video Tahrirlash Dasturlari</h2>
+      <div class="row g-4">
+
+        <!-- CARD 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow border-0">
+            <img src="../img/premiere.jpg" class="card-img-top" alt="Premiere Pro" />
+            <div class="card-body">
+              <h5 class="card-title">Adobe Premiere Pro</h5>
+              <p class="card-text">Professional darajadagi montaj vositasi, kino sanoatida keng qo‘llaniladi.</p>
+              <button class="btn btn-neon w-100" data-bs-toggle="modal" data-bs-target="#premiereModal">Ko‘proq</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 shadow border-0">
+            <img src="../img/davinci.webp" class="card-img-top" alt="DaVinci Resolve" />
+            <div class="card-body">
+              <h5 class="card-title">DaVinci Resolve</h5>
+              <p class="card-text">Rang bilan ishlashda kuchli, professional video montajchilar uchun.</p>
+              <button class="btn btn-neon w-100" data-bs-toggle="modal" data-bs-target="#davinciModal">Ko‘proq</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boshqalar uchun ham shunday kartalar qo‘shamiz -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: Premiere -->
+  <div class="modal fade" id="premiereModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Adobe Premiere Pro haqida</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Adobe Premiere Pro bu Adobe kompaniyasining eng mashhur video tahrirlovchi dasturidir. Unda timeline, efektlar, audio balans, transition, color grading imkoniyatlari bor.</p>
+          <ul>
+            <li>Yuqori sifatli eksport</li>
+            <li>After Effects bilan integratsiya</li>
+            <li>Professional montaj vositalari</li>
+          </ul>
+          <a href="https://www.adobe.com/products/premiere.html"  class="btn btn-sm btn-light mt-3">Rasmiy sayt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: DaVinci -->
+  <div class="modal fade" id="davinciModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">DaVinci Resolve haqida</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>DaVinci Resolve — professional video tahrir va rangni sozlash uchun kuchli vosita. Kinolar, reklama va bloglar uchun keng qo‘llaniladi.</p>
+          <ul>
+            <li>Color grading’ning yetakchisi</li>
+            <li>Fairlight audio engine</li>
+            <li>Fusion compositing vositasi</li>
+          </ul>
+          <a href="https://www.blackmagicdesign.com/products/davinciresolve/" class="btn btn-sm btn-light mt-3">Rasmiy sayt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
