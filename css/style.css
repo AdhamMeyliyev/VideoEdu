@@ -1,4 +1,8 @@
 /* Neon ranglar */
+body{
+	overflow-x: hidden;
+}
+
 .text-neon {
   color: #00f5a0;
 }
